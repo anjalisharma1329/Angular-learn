@@ -12,9 +12,5 @@ export class RegisterComponent implements OnInit {
   ngOnInit() {
 
   }
-  usersList: object;
-
-  registerForm(){
-  }
 
 }
