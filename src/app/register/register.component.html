@@ -1,0 +1,36 @@
+<div class="row">
+	<div class="col-md-6">
+      <h4>Register Here</h4>
+      <mat-card>
+        <form #register = "ngForm" (ngSubmit) = "registerForm(register.value)" >
+        <div class="example-container">
+          <mat-form-field>
+            <input matInput placeholder="Full Name" type="text" required name="fname" [(ngmodel)]="usersList.fname">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Email ID" type="email" required name="email" [(ngmodel)]="usersList.email">
+          </mat-form-field>
+          <!-- <mat-form-field>
+            <input matInput placeholder="Password" type="password" required [formControl]="pwd">
+          </mat-form-field>
+          <mat-radio-group aria-label="Select Gendar" required [formControl]="gender">
+            <label style="padding-right:20px;">Gender:</label>
+            <mat-radio-button value="male" style="margin-right:10px;">Male</mat-radio-button>
+            <mat-radio-button value="female">Fe-male</mat-radio-button>
+          </mat-radio-group>
+          <mat-form-field>
+            <input matInput placeholder="Phone Number" type="numer" required [formControl]="phonenumber">
+          </mat-form-field>          
+          <mat-form-field >
+            <mat-select placeholder="Select City" [formControl]="city">
+              <mat-option value="ghaziabad">Ghaziabad</mat-option>
+              <mat-option value="delhi">Delhi</mat-option>
+              <mat-option value="noida">Noida</mat-option>
+            </mat-select>
+          </mat-form-field> -->
+          <button mat-raised-button color="primary">Submit</button>
+        </div>
+        </form>
+      </mat-card>
+</div>
+</div>
