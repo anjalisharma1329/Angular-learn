@@ -1,7 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+
 import { AppRoutingModule } from './app-routing.module';
+import { MyserviceService } from './myservice.service';
+import { HttpClientModule } from '@angular/common/http';
+
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -28,13 +32,15 @@ import { RegisterUserListComponent } from './register-user-list/register-user-li
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+    
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
     MatDatepickerModule, MatCardModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatSelectModule,  MatCheckboxModule, MatRadioModule, MatTableModule,
   
   ],
-  providers: [],
+  providers: [MyserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
