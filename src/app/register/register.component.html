@@ -1,36 +1,41 @@
 <div class="row">
-	<div class="col-md-6">
-      <h4>Register Here...</h4>
-      <mat-card>
-        <form>
+  <div class="col-md-4">
+    <!-- Exapmles of data binding -->
+    <p>Uppercase Pipe
+      <b>{{title | uppercase}}</b></p>
+    <p>Lowercase Pipe
+      <b>{{title | lowercase}}</b></p>
+    <p>Currency Pipe
+      <b>{{6589.23 | currency:"USD"}}</b></p>
+    <p>Date pipe Date
+      <b>{{todaydate | date:'d/M/y'}}</b></p>
+    <p>Date pipe Time
+      <b>{{todaydate | date:'shortTime'}}</b></p>
+    <p>Decimal Pipe
+      <b>{{ 454.78787814 | number: '3.4-4' }}</b></p>
+  </div>
+  <div class="col-md-6">
+    <mat-card>
+      <form>
         <div class="example-container">
           <mat-form-field>
-            <input matInput placeholder="Full Name" type="text" required >
-          </mat-form-field>
-          <mat-form-field>
-            <input matInput placeholder="Email ID" type="email" required >
-          </mat-form-field>
-          <mat-form-field>
-            <input matInput placeholder="Password" type="password" required >
-          </mat-form-field>
-          <mat-radio-group aria-label="Select Gendar" required>
-            <label style="padding-right:20px;">Gender:</label>
-            <mat-radio-button value="male" style="margin-right:10px;">Male</mat-radio-button>
-            <mat-radio-button value="female">Fe-male</mat-radio-button>
-          </mat-radio-group>
-          <mat-form-field>
-            <input matInput placeholder="Phone Number" type="numer" required >
-          </mat-form-field>          
-          <mat-form-field >
-            <mat-select placeholder="Select City" >
-              <mat-option value="ghaziabad">Ghaziabad</mat-option>
-              <mat-option value="delhi">Delhi</mat-option>
-              <mat-option value="noida">Noida</mat-option>
+            <mat-select placeholder="Select City" (selectionChange)="changecity($event)">
+              <mat-option *ngFor="let i of city"> {{i}} </mat-option>
             </mat-select>
           </mat-form-field>
-          <button mat-raised-button color="primary">Submit</button>
+          <div>
+            <span *ngIf="isavailable; then condition1 else condition2">Condition is
+              valid.</span>
+            <ng-template #condition1>Condition is valid</ng-template>
+            <ng-template #condition2>Condition is invalid</ng-template>
+          </div>
+          <select (change)="changecity($event)">
+            <option *ngFor="let i of city">{{i}}</option>
+          </select>
         </div>
-        </form>
-      </mat-card>
-</div>
+        <!-- Exapmles of Event binding -->
+        <button mat-raised-button color="primary" (click)="firstclick($event)">Save</button>
+      </form>
+    </mat-card>
+  </div>
 </div>
