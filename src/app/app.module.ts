@@ -10,7 +10,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // import form module
-import {FormsModule,ReactiveFormsModule} from '@angular/forms' 
+import {FormsModule} from '@angular/forms' 
 
 // import material component
 import { MatDatepickerModule, MatCardModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatCheckboxModule,  MatRadioModule} from '@angular/material';
@@ -36,7 +36,6 @@ import { RegisterUserListComponent } from './register-user-list/register-user-li
     
     BrowserAnimationsModule,
     FormsModule,
-    ReactiveFormsModule,
     MatDatepickerModule, MatCardModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatSelectModule,  MatCheckboxModule, MatRadioModule, MatTableModule,
   
   ],

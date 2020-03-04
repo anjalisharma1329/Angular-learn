@@ -14,6 +14,4 @@ export class MyserviceService {
 	getData() {
 	 return this.http.get(this.apiurl);
 	}
-
-  constructor() { }
 }
